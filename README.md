@@ -1,4 +1,4 @@
-[Link to Subfolder README](DBMS/README.md)
+[DBMS](DBMS/README.md)
 
 
 # SQL and NoSQL Databases: An In-Depth Comparison
