@@ -1,148 +1,78 @@
 [DBMS](DBMS/README.md)
 
-
-# SQL and NoSQL Databases: An In-Depth Comparison
+# Comprehensive Guide to OOP in Java, DBMS, and Shell Scripting
 
 ## Table of Contents
-1. [Introduction](#introduction)
-2. [What is SQL?](#what-is-sql)
-3. [What is NoSQL?](#what-is-nosql)
-4. [Key Differences Between SQL and NoSQL](#key-differences-between-sql-and-nosql)
-5. [Use Cases](#use-cases)
-6. [Examples of SQL Databases](#examples-of-sql-databases)
-7. [Examples of NoSQL Databases](#examples-of-nosql-databases)
-8. [Advantages and Disadvantages](#advantages-and-disadvantages)
-    - [SQL](#sql)
-    - [NoSQL](#nosql)
-9. [When to Use SQL vs NoSQL](#when-to-use-sql-vs-nosql)
-10. [Conclusion](#conclusion)
-11. [Further Reading](#further-reading)
+1. [Object-Oriented Programming in Java](#object-oriented-programming-in-java)
+    - [Introduction to OOP](#introduction-to-oop)
+    - [Key Concepts of OOP](#key-concepts-of-oop)
+        - [Classes and Objects](#classes-and-objects)
+        - [Inheritance](#inheritance)
+        - [Polymorphism](#polymorphism)
+        - [Encapsulation](#encapsulation)
+        - [Abstraction](#abstraction)
+    - [Java OOP Features](#java-oop-features)
+    - [Examples of OOP in Java](#examples-of-oop-in-java)
+2. [Database Management Systems (DBMS)](#database-management-systems-dbms)
+    - [Introduction to DBMS](#introduction-to-dbms)
+    - [Types of DBMS](#types-of-dbms)
+        - [Hierarchical DBMS](#hierarchical-dbms)
+        - [Network DBMS](#network-dbms)
+        - [Relational DBMS](#relational-dbms)
+        - [Object-Oriented DBMS](#object-oriented-dbms)
+    - [Key Concepts of DBMS](#key-concepts-of-dbms)
+        - [Schema](#schema)
+        - [Tables](#tables)
+        - [SQL](#sql)
+        - [Normalization](#normalization)
+    - [Advantages of DBMS](#advantages-of-dbms)
+    - [Examples of DBMS](#examples-of-dbms)
+        - [MySQL](#mysql)
+        - [PostgreSQL](#postgresql)
+        - [MongoDB](#mongodb)
+3. [Shell Scripting](#shell-scripting)
+    - [Introduction to Shell Scripting](#introduction-to-shell-scripting)
+    - [Basic Concepts of Shell Scripting](#basic-concepts-of-shell-scripting)
+        - [Shell Types](#shell-types)
+        - [Syntax and Structure](#syntax-and-structure)
+    - [Common Shell Commands](#common-shell-commands)
+    - [Advanced Shell Scripting](#advanced-shell-scripting)
+        - [Conditional Statements](#conditional-statements)
+        - [Loops](#loops)
+        - [Functions](#functions)
+    - [Examples of Shell Scripts](#examples-of-shell-scripts)
 
 ---
 
-## Introduction
+## Object-Oriented Programming in Java
 
-Databases are an essential component of modern software applications, providing the means to store, retrieve, and manage data efficiently. Broadly, databases can be categorized into two types: SQL (relational) and NoSQL (non-relational). This README aims to provide an in-depth comparison of SQL and NoSQL databases, covering their fundamental concepts, differences, use cases, and examples.
+### Introduction to OOP
 
-## What is SQL?
+Object-Oriented Programming (OOP) is a programming paradigm that uses objects and classes to design and develop applications. OOP concepts in Java help to create modular, reusable, and scalable software. Java is known for its strong OOP capabilities, making it one of the most widely used programming languages.
 
-SQL (Structured Query Language) databases, also known as relational databases, have been around since the 1970s. They use a structured schema to define the data, which is organized into tables consisting of rows and columns. Each table has a unique key to identify records and can establish relationships with other tables.
+### Key Concepts of OOP
 
-### Key Characteristics of SQL Databases:
-- **Schema-Based**: Data is structured and follows a predefined schema.
-- **ACID Transactions**: SQL databases ensure Atomicity, Consistency, Isolation, and Durability (ACID) for reliable transactions.
-- **SQL Query Language**: Data is manipulated using SQL, a powerful and declarative language.
-- **Normalization**: Data is normalized to reduce redundancy and improve data integrity.
+#### Classes and Objects
 
-## What is NoSQL?
+- **Class**: A blueprint for creating objects. It defines a datatype by bundling data and methods that work on the data into a single unit.
+- **Object**: An instance of a class. It is a real-world entity that contains states and behaviors defined by its class.
 
-NoSQL databases emerged in the early 2000s to address the limitations of SQL databases, particularly in terms of scalability and flexibility. NoSQL stands for "Not Only SQL" and encompasses a variety of database technologies that do not rely on a fixed schema and can handle different types of data models.
+```java
+public class Animal {
+    String name;
+    int age;
 
-### Key Characteristics of NoSQL Databases:
-- **Schema-Less**: Data can be stored without a predefined schema, offering more flexibility.
-- **Eventual Consistency**: NoSQL databases often prioritize availability and partition tolerance over immediate consistency, following the CAP theorem.
-- **Variety of Data Models**: NoSQL databases can be document-based, key-value pairs, column-family stores, or graph databases.
-- **Horizontal Scalability**: Designed to scale out by distributing data across multiple servers.
+    void displayInfo() {
+        System.out.println("Name: " + name);
+        System.out.println("Age: " + age);
+    }
+}
 
-## Key Differences Between SQL and NoSQL
-
-| Feature                | SQL Databases                             | NoSQL Databases                                 |
-|------------------------|-------------------------------------------|-------------------------------------------------|
-| **Schema**             | Fixed schema                              | Dynamic schema                                  |
-| **Data Model**         | Table-based                               | Document, key-value, column-family, graph       |
-| **Transactions**       | ACID-compliant                            | Eventual consistency                            |
-| **Scalability**        | Vertical (scale-up)                       | Horizontal (scale-out)                          |
-| **Query Language**     | SQL                                       | Varies by database (e.g., MongoDB Query Language)|
-| **Flexibility**        | Less flexible due to schema               | Highly flexible                                 |
-| **Data Relationships** | Strong relationships with joins           | Relationships handled differently, often within documents|
-| **Use Cases**          | Complex queries, transactions             | Big data, real-time analytics, flexible schema  |
-
-## Use Cases
-
-### SQL Use Cases
-- **E-commerce Systems**: SQL databases are ideal for managing complex transactions and relationships, such as orders, customers, and inventory.
-- **Financial Applications**: Ensuring data integrity and consistency is crucial for applications dealing with financial transactions.
-- **Customer Relationship Management (CRM)**: SQL databases can handle the complex queries and relationships required for managing customer data.
-
-### NoSQL Use Cases
-- **Content Management Systems (CMS)**: NoSQL databases like MongoDB are well-suited for storing and managing unstructured data such as articles, blog posts, and media.
-- **IoT Applications**: NoSQL databases can efficiently handle the massive amount of data generated by IoT devices.
-- **Real-Time Analytics**: NoSQL databases like Cassandra are designed to handle high write and read throughput, making them ideal for real-time data analytics.
-
-## Examples of SQL Databases
-
-### 1. MySQL
-MySQL is one of the most popular open-source relational databases. It is widely used in web applications and is known for its reliability, ease of use, and performance.
-
-### 2. PostgreSQL
-PostgreSQL is an advanced open-source relational database that supports both SQL and JSON querying. It is highly extensible and known for its strong support for ACID transactions and complex queries.
-
-### 3. SQLite
-SQLite is a self-contained, serverless SQL database engine. It is widely used in embedded systems, mobile applications, and small-scale applications due to its simplicity and lightweight nature.
-
-## Examples of NoSQL Databases
-
-### 1. MongoDB
-MongoDB is a document-based NoSQL database that stores data in JSON-like documents. It offers high flexibility and scalability, making it a popular choice for modern web applications.
-
-### 2. Cassandra
-Apache Cassandra is a column-family store designed for handling large amounts of data across many commodity servers without a single point of failure. It is known for its high availability and scalability.
-
-### 3. Redis
-Redis is an in-memory key-value store known for its high performance and support for various data structures such as strings, hashes, lists, and sets. It is often used for caching, real-time analytics, and messaging.
-
-## Advantages and Disadvantages
-
-### SQL
-
-#### Advantages
-- **Structured Data**: Ideal for structured data with predefined schemas.
-- **ACID Compliance**: Ensures reliable transactions and data integrity.
-- **Complex Queries**: Powerful query capabilities for complex data operations.
-- **Data Relationships**: Strong support for data relationships and joins.
-
-#### Disadvantages
-- **Scalability**: Limited horizontal scalability.
-- **Flexibility**: Less flexible in handling unstructured or semi-structured data.
-- **Performance**: Can become slower with very large datasets and complex queries.
-
-### NoSQL
-
-#### Advantages
-- **Scalability**: Designed for horizontal scalability across multiple servers.
-- **Flexibility**: Can handle unstructured, semi-structured, and structured data.
-- **Performance**: Optimized for high performance in read and write operations.
-- **Schema-Less**: Allows for dynamic changes to the data model without downtime.
-
-#### Disadvantages
-- **Consistency**: May not provide immediate consistency (eventual consistency).
-- **Complexity**: Requires more complex data modeling for relationships.
-- **Maturity**: Some NoSQL databases are relatively newer and may lack certain features and stability compared to SQL databases.
-
-## When to Use SQL vs NoSQL
-
-### Use SQL When:
-- You need to ensure ACID compliance for transactions.
-- Your data and relationships are structured and well-defined.
-- You require complex queries and reporting.
-- Data integrity and consistency are critical.
-
-### Use NoSQL When:
-- You need to handle large volumes of unstructured or semi-structured data.
-- Your application requires high availability and scalability.
-- You need to store and retrieve data with flexible or evolving schemas.
-- Real-time analytics and big data processing are key requirements.
-
-## Conclusion
-
-Both SQL and NoSQL databases have their strengths and weaknesses, and the choice between them depends on the specific requirements of your application. SQL databases are well-suited for structured data and complex transactions, while NoSQL databases offer flexibility, scalability, and high performance for unstructured data and big data applications.
-
-Understanding the differences and use cases of SQL and NoSQL databases can help you make informed decisions about which type of database to use for your projects.
-
-## Further Reading
-
-- [SQL vs NoSQL Databases](https://www.geeksforgeeks.org/sql-vs-nosql/)
-- [When to Use NoSQL Databases](https://www.mongodb.com/nosql-explained)
-- [Introduction to Relational Databases](https://www.postgresql.org/docs/current/tutorial.html)
-- [Understanding NoSQL Databases](https://cassandra.apache.org/doc/latest/)
-
+public class Main {
+    public static void main(String[] args) {
+        Animal dog = new Animal();
+        dog.name = "Buddy";
+        dog.age = 5;
+        dog.displayInfo();
+    }
+}
