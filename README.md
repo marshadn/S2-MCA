@@ -78,6 +78,46 @@ public class Main {
 }
 ```
 
+
+## Inheritance
+
+Inheritance in Java allows a class (subclass or child class) to inherit properties and behaviors from another class (superclass or parent class). This promotes code reusability and establishes an "is-a" relationship between classes.
+
+## Polymorphism
+
+Polymorphism allows objects to be treated as instances of their parent class rather than their specific class type. In Java, polymorphism is achieved through method overriding (where a subclass provides a specific implementation of a method defined in its superclass) and method overloading (where multiple methods in the same class have the same name but different parameters).
+
+## Encapsulation
+
+Encapsulation is the bundling of data (attributes) and methods (functions) that operate on the data into a single unit (class). It involves hiding the internal state of an object and restricting access to certain components using access modifiers (like private, protected, public).
+
+## Abstraction
+
+Abstraction in Java involves hiding the complex implementation details and showing only the essential features of an object. It allows developers to focus on what an object does rather than how it does it. Abstract classes and interfaces are used to achieve abstraction in Java.
+
+## Java OOP Features
+
+Java is designed with several features to support Object-Oriented Programming:
+
+- **Class**: Defines the blueprint for objects by specifying data (attributes) and methods (functions).
+- **Object**: Instances of classes that contain the actual data.
+- **Inheritance**: Allows a new class to inherit properties and methods from an existing class.
+- **Polymorphism**: Enables objects to be treated as instances of their parent class.
+- **Encapsulation**: Bundles data and methods within a class and controls access using access modifiers.
+- **Abstraction**: Hides the complex implementation details and shows only the necessary functionalities.
+
+## Examples of OOP in Java
+
+### Example 1: Inheritance and Method Overriding
+
+This example demonstrates how inheritance allows a subclass to override methods from its superclass to provide specific implementations.
+
+### Example 2: Encapsulation and Access Modifiers
+
+This example showcases how encapsulation in Java helps in bundling data and methods within a class and controlling access to them using access modifiers.
+
+
+
 # Database Management Systems (DBMS)
 
 ## Introduction to DBMS
