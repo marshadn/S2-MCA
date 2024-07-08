@@ -23,19 +23,19 @@ mycol=mydbs["mycollection"]
 # y=mycol.delete_one(mydict)
 # print(y)
 
-mydict=[
-    {"_id":1,"name":"Arker","age":34,"Mark":92},
-    {"_id":2,"name":"Newer","age":44,"Mark":97},
-    {"_id":3,"name":"Hhfgh","age":21,"Mark":98},
-    {"_id":4,"name":"KJb","age":22,"Mark":67},
-    {"_id":5,"name":"GHdsfsd","age":12,"Mark":78},
-    {"_id":6,"name":"Bgker","age":45,"Mark":88},
-    {"_id":7,"name":"KJiker","age":35,"Mark":60},
-    {"_id":8,"name":"Anjnr","age":37,"Mark":70},
-    {"_id":9,"name":"Mokbh","age":24,"Mark":79},
-    {"_id":10,"name":"Bgyg","age":34,"Mark":96},
+# mydict=[
+#     {"_id":1,"name":"Arker","age":34,"Mark":92},
+#     {"_id":2,"name":"Newer","age":44,"Mark":97},
+#     {"_id":3,"name":"Hhfgh","age":21,"Mark":98},
+#     {"_id":4,"name":"KJb","age":22,"Mark":67},
+#     {"_id":5,"name":"GHdsfsd","age":12,"Mark":78},
+#     {"_id":6,"name":"Bgker","age":45,"Mark":88},
+#     {"_id":7,"name":"KJiker","age":35,"Mark":60},
+#     {"_id":8,"name":"Anjnr","age":37,"Mark":70},
+#     {"_id":9,"name":"Mokbh","age":24,"Mark":79},
+#     {"_id":10,"name":"Bgyg","age":34,"Mark":96},
     
-]
+# ]
 # x=mycol.insert_many(mydict)
 # print(x)
 # x=mycol.find_one()
@@ -61,7 +61,7 @@ mydict=[
 # for x in mydoc:
 #     print(x)
 
-myInsert={"name":"Manga","age":22,"Mark":90,"Address":{"street":"houseXYZ","pin":676789}}
+#myInsert={"name":"Manga","age":22,"Mark":90,"Address":{"street":"houseXYZ","pin":676789}}
 # x=mycol.insert_one(myInsert)
 # print(x)
 
@@ -69,5 +69,4 @@ myInsert={"name":"Manga","age":22,"Mark":90,"Address":{"street":"houseXYZ","pin"
 # upd=mycol.update_many(myInsert,newValue)
 # print(upd)
 
-y=mycol.delete_one(myInsert)
-print(y)
+# #
