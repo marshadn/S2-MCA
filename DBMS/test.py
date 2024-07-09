@@ -39,3 +39,4 @@ x=db.studlist.update_one({"name.fname":"Renuka"},{"$set":{"name.fname":"Remya"}}
 x=db.studlist.find({},{"name":1,"address.city":1})
 for i in x:
     print(i['name']['fname']+" is living in "+i['address']['city'])
+    
