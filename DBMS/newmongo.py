@@ -108,5 +108,9 @@ mydict=[
 ]
 #x=db.cet.insert_many(mydict)
 #print(mydict)
-x=db.cet.find_one({"name":"Mrd"},{"_id":0})
-print(x)
+# x=db.cet.find_one({"name":"Mrd"},{"_id":0})
+# print(x)
+
+x=db.cet.find({},{"_id":0,"mark":5}).limit(2)
+for i in x:
+    print(i)
