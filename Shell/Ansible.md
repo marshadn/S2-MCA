@@ -7,7 +7,6 @@ Ansible uses a declarative language called YAML to define the desired state of t
 
 ### [Documentation](https://docs.ansible.com/ansible/latest/getting_started/introduction.html)
 
-<img src="./Others/ansible-arch.png" alt="alt" style="height:300px;">
 
 Ansible is owned by RedHat and it's python-based.
 Ansible is **Agent-less**, meaning, it does not require installing a client on the systems.
