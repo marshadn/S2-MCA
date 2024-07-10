@@ -1,5 +1,4 @@
 #!/bin/bash
-
 isAmstrong() {
 	num=$1
 	sum=0
@@ -10,7 +9,7 @@ isAmstrong() {
 		num=$(( $num / 10 ))
 	done
 	#return $(( $1 == $sum ))
-    echo $sum
+     echo $sum
 }
 
 # Function call
