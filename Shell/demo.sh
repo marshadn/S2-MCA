@@ -66,8 +66,90 @@
 # echo "reverse of $str is"
 # echo $str | rev
 
-echo "Current shell is:$SHELL"
-echo "Current directory  is:$HOME"
-echo "OS is:$OSTYPE"
-echo "Current w.d is:" 
-pwd
+# echo "Current shell is:$SHELL"
+# echo "Current directory  is:$HOME"
+# echo "OS is:$OSTYPE"
+# echo "Current w.d is:" 
+# pwd
+
+#Print lines matching certain word pattern.  
+#!/bin/bash 
+read -p "Enter a file name: " file1 
+echo "Enter contents of $file1: " 
+cat > $file1 
+read -p "Enter a pattern to search in file: " s 
+grep -ni $s $file1 
+ 
+ 
+ 
+#!/bin/bash 
+i="y" 
+read -p "Enter name of database: " db 
+while [ $i = "y" ] 
+do 
+    clear 
+    echo "1. View Database" 
+    echo "2. View Specific Record" 
+    echo "3. Add Record" 
+    echo "4. Delete Record" 
+    echo "5. Exit" 
+    read -p "Enter your choicce: " ch 
+    case $ch in 
+    1) cat $db;; 
+    2) read -p "Enter ID: " id 
+       grep -i "$id" $db;; 
+    3) read -p "Enter new student ID: " tid 
+       read -p "Enter new name: " nm 
+       read -p "Enter designation: " des 
+       read -p "Enter college name: " college 
+       echo "$tid $nm $des $college">>$db;; 
+    4) read -p "Enter ID: " id 
+       grep -v "$id" $db > dbs1 
+       echo "Record is deleted" 
+       cat dbs1;; 
+    5) exit ;; 
+    *) echo "Invalid choice";; 
+    esac 
+    read -p "Do you want to continue? " i 
+    if [ $i != "y" ] 
+    then 
+    exit 
+    fi 
+done 
+
+#!/bin/bash
+
+# Function to calculate GCD
+gcd() {
+    local a=$1
+    local b=$2
+    while [ $b -ne 0 ]; do
+        local temp=$b
+        b=$((a % b))
+        a=$temp
+    done
+    echo $a
+}
+
+# Function to calculate LCM
+lcm() {
+    local a=$1
+    local b=$2
+    echo $(( (a * b) / $(gcd $a $b) ))
+}
+
+# Read the two numbers from the user
+read -p "Enter the first number: " num1
+read -p "Enter the second number: " num2
+
+# Calculate GCD
+gcd_result=$(gcd $num1 $num2)
+# Calculate LCM
+lcm_result=$(lcm $num1 $num2)
+
+# Display the results
+echo "The GCD of $num1 and $num2 is: $gcd_result"
+echo "The LCM of $num1 and $num2 is: $lcm_result"
+
+  
+
