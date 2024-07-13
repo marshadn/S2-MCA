@@ -115,8 +115,9 @@ public class Cat extends Animal {
 }
 ```
 ### Abstraction
-Abstraction is the concept of hiding the internal details and describing things in simple terms. It can be achieved with abstract classes and interfaces.
-Abstract Class
+Abstraction is the concept of hiding the internal details and describing things in simple terms. It can be achieved with abstract classes and interfaces.<br>
+<h3>Abstract Class</h3>
+
 ```java
 abstract class Animal {
     // Abstract method (does not have a body)
@@ -134,7 +135,8 @@ class Dog extends Animal {
     }
 }
 ```
-Interface
+<h3>Interface</h3>
+
 ```java
 interface Animal {
     public void eat();
