@@ -57,26 +57,6 @@ Object-Oriented Programming (OOP) is a programming paradigm that uses objects an
 - **Class**: A blueprint for creating objects. It defines a datatype by bundling data and methods that work on the data into a single unit.
 - **Object**: An instance of a class. It is a real-world entity that contains states and behaviors defined by its class.
 
-```java
-public class Animal {
-    String name;
-    int age;
-
-    void displayInfo() {
-        System.out.println("Name: " + name);
-        System.out.println("Age: " + age);
-    }
-}
-
-public class Main {
-    public static void main(String[] args) {
-        Animal dog = new Animal();
-        dog.name = "Buddy";
-        dog.age = 5;
-        dog.displayInfo();
-    }
-}
-```
 
 
 ## Inheritance
