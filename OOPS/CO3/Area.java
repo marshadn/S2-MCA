@@ -1,3 +1,6 @@
+/*write a java Program to calculate area of different 
+shapes(circle,square,rectangle,triangle) using overloaded functions */
+
 import java.util.Scanner;
 
 public class Area {
