@@ -1,6 +1,6 @@
 import java.util.*;
 
-public class Checkarrelem {
+public class CheckArrayElement {
 
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
