@@ -1,5 +1,7 @@
-package CO4.Graphics;
+package Graphics;
 
 public interface Shape {
-    double getArea();
+
+    double area();
+
 }

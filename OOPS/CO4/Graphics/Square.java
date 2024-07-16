@@ -1,14 +1,15 @@
-package CO4.Graphics;
+package Graphics;
 
 public class Square implements Shape {
-    private double side;
+
+    double side;
 
     public Square(double side) {
         this.side = side;
     }
 
-    @Override
-    public double getArea() {
+    public double area() {
         return side * side;
     }
+
 }

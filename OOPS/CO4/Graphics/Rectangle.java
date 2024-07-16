@@ -1,16 +1,17 @@
-package CO4.Graphics;
+package Graphics;
 
 public class Rectangle implements Shape {
-    private double length;
-    private double width;
 
-    public Rectangle(double length, double width) {
+    int length;
+    int breadth;
+
+    public Rectangle(int length, int breadth) {
         this.length = length;
-        this.width = width;
+        this.breadth = breadth;
     }
 
-    @Override
-    public double getArea() {
-        return length * width;
+    public double area() {
+        return length * breadth;
     }
+
 }
