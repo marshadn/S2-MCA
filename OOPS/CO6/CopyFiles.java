@@ -1,10 +1,9 @@
-// 3. Write a program to copy one file to another.
+// Another easiest method to copy one file to another
 
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
 
-// Another easiest method to copy one file to another
 public class CopyFiles {
 
     public static void main(String[] args) {
